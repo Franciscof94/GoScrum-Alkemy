@@ -25,7 +25,7 @@ const Login = () => {
     onSubmit: () => {
   
       fetch(
-        'https://goscrum-api.alkemy.org/auth/login',
+        `${API_ENDPOINT}auth/login`,
         {
           method: "POST",
           headers: {

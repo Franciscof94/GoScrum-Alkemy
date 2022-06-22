@@ -18,7 +18,7 @@ const Register = () => {
 
   useEffect(() => {
     axios
-      .get("https://goscrum-api.alkemy.org/auth/data")
+      .get(`${API_ENDPOINT}auth/data`)
       .then((response) => setData(response.data.result));
   }, []);
 
