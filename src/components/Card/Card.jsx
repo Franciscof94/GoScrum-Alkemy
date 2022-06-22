@@ -26,7 +26,7 @@ const Card = ({ task, deleteTask, taskEdit }) => {
                 <div>{datetime}</div>
               </div>
               <div>
-                <p>{upperCase(truncate(task.description, 45))}</p>
+                <p>{upperCase(truncate(task.description, 70))}</p>
               </div>
               <div>
                 <div>
