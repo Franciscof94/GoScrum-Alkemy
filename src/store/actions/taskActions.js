@@ -60,7 +60,7 @@ export const taskEdit = (data) => (dispatch) => {
       ? 0
       : statusArray.indexOf(data.status) + 1;
 
-  fetch(`${API_ENDPOINT}task/${data._id}`, {
+  fetch(`https://goscrum-api.alkemy.org/task/${data._id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
