@@ -18,7 +18,7 @@ const Register = () => {
 
   useEffect(() => {
     axios
-      .get(`${API_ENDPOINT}auth/data`)
+      .get('https://goscrum-api.alkemy.org/auth/data')
       .then((response) => setData(response.data.result));
   }, []);
 
@@ -47,7 +47,7 @@ const Register = () => {
     }),
     onSubmit: () => {
       const teamID = values.teamID ? values.teamID : uuidv4();
-      fetch(`${API_ENDPOINT}/auth/register`, {
+      fetch('https://goscrum-api.alkemy.org/auth/register', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

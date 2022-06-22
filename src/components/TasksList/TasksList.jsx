@@ -39,9 +39,6 @@ const TasksList = ({
     }
   }, [filteredTasks]);
 
-  const renderAllCards = () => {
-    return renderList?.map((task) => <Card task={task} />);
-  };
 
   const renderColumnCards = (value) =>
     renderList?.filter((task) => task.status === value);

@@ -4,14 +4,11 @@ import React from "react";
 import { toast } from "react-toastify";
 import { Wrapper } from "./Styles";
 import { Button } from "../../share/Button";
-import { connect, useDispatch } from "react-redux";
-import { addNewTask } from "../../store/actions/taskActions";
 import { Select } from "../../GlobalStyles/GlobalStyles";
 
 const { REACT_APP_API_ENDPOINT: API_ENDPOINT } = process.env;
 
 const TasksForm = () => {
-  const dispatch = useDispatch();
   const required = "* Campo obligatorio";
 
   const formik = useFormik({
@@ -30,7 +27,7 @@ const TasksForm = () => {
       description: Yup.string().required(required),
     }),
     onSubmit: () => {
-      fetch(`${API_ENDPOINT}task`, {
+      fetch('https://goscrum-api.alkemy.org/task', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -14,7 +14,7 @@ export const TasksRequest = () => ({
 
 export const getTasks = (value) => (dispatch) => {
   dispatch(TasksRequest());
-  fetch(`${API_ENDPOINT}task/${value}`, {
+  fetch(`https://goscrum-api.alkemy.org/task/${value}`, {
     headers: {
       "Content-Type": "application/json",
       Authorization: "Bearer " + localStorage.getItem("token"),
@@ -40,7 +40,7 @@ export const tasksFailure = (value) => ({
 });
 
 export const deleteTask = (id) => (dispatch) => {
-  fetch(`${API_ENDPOINT}task/${id}`, {
+  fetch(`https://goscrum-api.alkemy.org/task/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
